@@ -1,8 +1,9 @@
-import org.openqa.selenium.By;
+package src1;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class XpathDemo {
+public class MaximizeWindow {
 
     public static void main(String[] args) {
 
@@ -10,14 +11,10 @@ public class XpathDemo {
 
         WebDriver driver = new ChromeDriver();
 
-        driver.get("https://www.facebook.com/");
+        driver.get("https://www.google.com/");
 
-        driver.findElement(By.xpath("//input[@id='email']")).sendKeys("abc");
-
-        driver.findElement(By.xpath("//a[text()='Forgotten password?']")).click();
+        driver.manage().window().maximize();
 
         driver.quit();
-
-
     }
 }
