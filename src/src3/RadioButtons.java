@@ -40,8 +40,5 @@ public class RadioButtons {
         System.out.println("The radio button is selected :" +selectStatus);
 
 
-
-
-
     }
 }
