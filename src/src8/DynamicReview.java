@@ -12,7 +12,7 @@ public class DynamicReview {
 
     public static void main(String[] args) {
 
-        System.setProperty("webdriver.chrome.driver", "driver/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
 
         WebDriver driver = new ChromeDriver();
 
@@ -31,14 +31,14 @@ public class DynamicReview {
         WebElement loginButton = driver.findElement(By.id("ctl00_MainContent_login_button"));
         loginButton.click();
 
-        //check the checkBox that contains "screen saver" as a product
+        //check the checkBox that contains "screensaver" as a product
         List<WebElement> secondColumn = driver.findElements(By.xpath("//table[@class='SampleTable']/tbody/tr/td[3]"));
 
         //traverse through the list
         for (int i=0; i< secondColumn.size(); i++) {
             String text = secondColumn.get(i).getText();
 
-            if (text.equalsIgnoreCase("MyMoney")) {
+            if (text.equalsIgnoreCase("ScreenSaver")) {
 
                 int rowNumber = i + 1;
                 System.out.println(rowNumber);

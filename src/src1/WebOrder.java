@@ -8,7 +8,7 @@ public class WebOrder {
 
     public static void main(String[] args) {
 
-        System.setProperty("webdriver.chrome.driver", "driver/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
 
         WebDriver driver = new ChromeDriver();
 
@@ -16,11 +16,19 @@ public class WebOrder {
 
         driver.manage().window().maximize();
 
-        driver.findElement(By.id("ctl00$MainContent$username")).sendKeys("Tester");
+        driver.findElement(By.id("ctl00_MainContent_username")).sendKeys("Tester");
 
-        driver.findElement(By.id("ctl00$MainContent$password")).sendKeys("Test");
+        driver.findElement(By.id("ctl00_MainContent_password")).sendKeys("Test");
 
         driver.findElement(By.className("button")).click();
+
+        String title = driver.getTitle();
+
+        if (title.equalsIgnoreCase(" Web Orders")) {
+            System.out.println("The title is correct: " + title);
+        } else {
+            System.out.println("The title is not correct " + title);
+        }
 
     }
 }

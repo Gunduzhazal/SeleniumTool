@@ -8,7 +8,7 @@ public class ParaBank {
 
     public static void main(String[] args) throws InterruptedException {
 
-        System.setProperty("webdriver.chrome.driver", "driver/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
 
         WebDriver driver = new ChromeDriver();
 

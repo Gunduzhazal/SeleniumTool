@@ -12,7 +12,7 @@ public class tableBasic {
 
     public static void main(String[] args) {
 
-        System.setProperty("webdriver.chrome.driver", "driver/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
 
         WebDriver driver = new ChromeDriver();
 
@@ -30,6 +30,7 @@ public class tableBasic {
 
         for (WebElement row:rows) {
             String rowText = row.getText();
+            //System.out.println(rowText);
 
             if (rowText.contains("Google")) {
                 System.out.println(rowText);
@@ -42,6 +43,5 @@ public class tableBasic {
             String columnText = column.getText();
             System.out.println(columnText);
         }
-
     }
 }

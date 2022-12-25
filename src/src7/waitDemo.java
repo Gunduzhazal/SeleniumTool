@@ -13,7 +13,7 @@ public class waitDemo {
 
     public static void main(String[] args) {
 
-        System.setProperty("webdriver.chrome.driver", "driver/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
 
         WebDriver driver = new ChromeDriver();
 
@@ -32,7 +32,7 @@ public class waitDemo {
         WebElement button2 = driver.findElement(By.xpath("//button[@id='display-other-button']"));
         button2.click();
 
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, 20);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@id='hidden']")));
 
         WebElement visibleBtn = driver. findElement(By.xpath("//button[@id='hidden']"));

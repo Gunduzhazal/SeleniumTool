@@ -8,7 +8,7 @@ public class LocatingElements {
 
     public static void main(String[] args) {
 
-        System.setProperty("webdriver.chrome.driver", "driver/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
 
         WebDriver driver = new ChromeDriver();
 
@@ -18,7 +18,7 @@ public class LocatingElements {
 
         driver.findElement(By.name("pass")).sendKeys("123abc");
 
-        driver.findElement(By.name("login")).click();
+        //driver.findElement(By.name("login")).click();
 
         driver.findElement(By.linkText("Forgotten password?")).click();
 

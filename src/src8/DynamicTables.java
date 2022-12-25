@@ -12,7 +12,7 @@ public class DynamicTables {
 
     public static void main(String[] args) {
 
-        System.setProperty("webdriver.chrome.driver", "driver/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
 
         WebDriver driver = new ChromeDriver();
 
@@ -36,11 +36,10 @@ public class DynamicTables {
         for (int i=0; i<secondColumn.size(); i++) {
             String columnText = secondColumn.get(i).getText();
 
-            if (columnText.equalsIgnoreCase("MyMoney")) {
+            if (columnText.equalsIgnoreCase("ScreenSaver")) {
                 System.out.println(i + 1);
 
                 WebElement checkBox = driver.findElement(By.xpath("//table[@class='SampleTable']/tbody/tr[" + (i + 2) +"]/td[1]"));
-
                 checkBox.click();
             }
         }

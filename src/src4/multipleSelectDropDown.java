@@ -12,7 +12,7 @@ public class multipleSelectDropDown {
 
     public static void main(String[] args) throws InterruptedException {
 
-        System.setProperty("webdriver.chrome.driver", "driver/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
 
         WebDriver driver = new ChromeDriver();
 
@@ -25,6 +25,7 @@ public class multipleSelectDropDown {
         Select sel = new Select(DD);
 
         sel.selectByIndex(3);
+
         sel.selectByVisibleText("Texas");
 
         Thread.sleep(3000);
@@ -38,6 +39,7 @@ public class multipleSelectDropDown {
         }
 
         Thread.sleep(3000);
+
         sel.deselectAll();
 
         // check if the dropDown is multi select or not using with selenium?

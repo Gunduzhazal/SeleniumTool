@@ -12,7 +12,7 @@ public class WindowHandleAdvance {
 
     public static void main(String[] args) {
 
-        System.setProperty("webdriver.chrome.driver", "driver/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
 
         WebDriver driver = new ChromeDriver();
 
@@ -27,6 +27,7 @@ public class WindowHandleAdvance {
         Set<String> allHandles = driver.getWindowHandles();
 
         for (String handle: allHandles) {
+
             driver.switchTo().window(handle);
 
             String title = driver.getTitle();
